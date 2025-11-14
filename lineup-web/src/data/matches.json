@@ -1,0 +1,548 @@
+[
+  {
+    "id": "poland-netherlands",
+    "title": "World Cup Qualifiers",
+    "kickoff": "2025-11-20T18:45:00Z",
+    "venue": "National Stadium, Warsaw",
+    "heroImage": "lineup_view1.jpg",
+    "stadiumImage": "stadium1.jpg",
+    "teams": {
+      "home": {
+        "name": "Poland",
+        "code": "POL",
+        "rating": 7.05,
+        "formation": "5-3-2",
+        "color": "#ffffff",
+        "accent": "#00a859",
+        "players": [
+          {
+            "id": "pol-gk",
+            "name": "Ł. Skorupski",
+            "position": "GK",
+            "photo": "player1.jpg",
+            "x": 50,
+            "y": 95
+          },
+          {
+            "id": "pol-rb",
+            "name": "B. Dawidowicz",
+            "position": "RB",
+            "photo": "player2.jpg",
+            "x": 82,
+            "y": 78
+          },
+          {
+            "id": "pol-cb1",
+            "name": "J. Bednarek",
+            "position": "CB",
+            "photo": "player3.jpg",
+            "x": 65,
+            "y": 78
+          },
+          {
+            "id": "pol-cb2",
+            "name": "J. Kiwior",
+            "position": "CB",
+            "photo": "player4.jpg",
+            "x": 35,
+            "y": 78
+          },
+          {
+            "id": "pol-lb",
+            "name": "N. Zalewski",
+            "position": "LB",
+            "photo": "player5.jpg",
+            "x": 18,
+            "y": 78
+          },
+          {
+            "id": "pol-cm1",
+            "name": "P. Zieliński",
+            "position": "CM",
+            "photo": "player6.jpg",
+            "x": 65,
+            "y": 55
+          },
+          {
+            "id": "pol-cm2",
+            "name": "S. Szymański",
+            "position": "CM",
+            "photo": "player7.jpg",
+            "x": 50,
+            "y": 60
+          },
+          {
+            "id": "pol-cm3",
+            "name": "M. Skóraś",
+            "position": "CM",
+            "photo": "player8.jpg",
+            "x": 35,
+            "y": 55
+          },
+          {
+            "id": "pol-st1",
+            "name": "M. Kamiński",
+            "position": "ST",
+            "photo": "player9.jpg",
+            "x": 60,
+            "y": 30
+          },
+          {
+            "id": "pol-st2",
+            "name": "K. Piątek",
+            "position": "ST",
+            "photo": "player10.jpg",
+            "x": 40,
+            "y": 30
+          },
+          {
+            "id": "pol-st3",
+            "name": "R. Lewandowski",
+            "position": "SS",
+            "photo": "player11.jpg",
+            "x": 50,
+            "y": 20
+          }
+        ]
+      },
+      "away": {
+        "name": "Netherlands",
+        "code": "NED",
+        "rating": 7.31,
+        "formation": "4-2-3-1",
+        "color": "#ff6600",
+        "accent": "#1d1d1d",
+        "players": [
+          {
+            "id": "ned-gk",
+            "name": "B. Verbruggen",
+            "position": "GK",
+            "photo": "player12.jpg",
+            "x": 50,
+            "y": 5
+          },
+          {
+            "id": "ned-rb",
+            "name": "D. Dumfries",
+            "position": "RB",
+            "photo": "player1.jpg",
+            "x": 18,
+            "y": 22
+          },
+          {
+            "id": "ned-cb1",
+            "name": "V. van Dijk",
+            "position": "CB",
+            "photo": "player2.jpg",
+            "x": 35,
+            "y": 22
+          },
+          {
+            "id": "ned-cb2",
+            "name": "J. Timber",
+            "position": "CB",
+            "photo": "player3.jpg",
+            "x": 65,
+            "y": 22
+          },
+          {
+            "id": "ned-lb",
+            "name": "N. Ake",
+            "position": "LB",
+            "photo": "player4.jpg",
+            "x": 82,
+            "y": 22
+          },
+          {
+            "id": "ned-cdm1",
+            "name": "T. Reijnders",
+            "position": "CM",
+            "photo": "player5.jpg",
+            "x": 60,
+            "y": 40
+          },
+          {
+            "id": "ned-cdm2",
+            "name": "R. Gravenberch",
+            "position": "CM",
+            "photo": "player6.jpg",
+            "x": 40,
+            "y": 40
+          },
+          {
+            "id": "ned-rw",
+            "name": "D. Malen",
+            "position": "RW",
+            "photo": "player7.jpg",
+            "x": 18,
+            "y": 58
+          },
+          {
+            "id": "ned-cam",
+            "name": "X. Simons",
+            "position": "CAM",
+            "photo": "player8.jpg",
+            "x": 50,
+            "y": 55
+          },
+          {
+            "id": "ned-lw",
+            "name": "M. Depay",
+            "position": "LW",
+            "photo": "player9.jpg",
+            "x": 82,
+            "y": 58
+          },
+          {
+            "id": "ned-st",
+            "name": "W. Weghorst",
+            "position": "ST",
+            "photo": "player10.jpg",
+            "x": 50,
+            "y": 75
+          }
+        ]
+      }
+    },
+    "filters": [
+      "Performance",
+      "Club",
+      "Age",
+      "Market value",
+      "Height"
+    ],
+    "standings": [
+      {
+        "team": "Netherlands",
+        "played": 6,
+        "wins": 5,
+        "draws": 0,
+        "losses": 1,
+        "gf": 14,
+        "ga": 4,
+        "gd": 10,
+        "points": 15
+      },
+      {
+        "team": "Poland",
+        "played": 6,
+        "wins": 4,
+        "draws": 1,
+        "losses": 1,
+        "gf": 12,
+        "ga": 5,
+        "gd": 7,
+        "points": 13
+      },
+      {
+        "team": "Czech Republic",
+        "played": 6,
+        "wins": 2,
+        "draws": 2,
+        "losses": 2,
+        "gf": 8,
+        "ga": 9,
+        "gd": -1,
+        "points": 8
+      },
+      {
+        "team": "Iceland",
+        "played": 6,
+        "wins": 1,
+        "draws": 1,
+        "losses": 4,
+        "gf": 5,
+        "ga": 11,
+        "gd": -6,
+        "points": 4
+      }
+    ],
+    "details": [
+      {
+        "label": "Stadium",
+        "value": "National Stadium"
+      },
+      {
+        "label": "Referee",
+        "value": "Daniel Siebert"
+      },
+      {
+        "label": "Weather",
+        "value": "10°C, Clear"
+      }
+    ]
+  },
+  {
+    "id": "namibia-angola",
+    "title": "COSAFA Cup",
+    "kickoff": "2025-12-02T15:00:00Z",
+    "venue": "Sam Nujoma Stadium",
+    "heroImage": "lineup_view2.jpg",
+    "stadiumImage": "stadium2.jpg",
+    "teams": {
+      "home": {
+        "name": "Namibia",
+        "code": "NAM",
+        "rating": 6.98,
+        "formation": "4-4-2",
+        "color": "#003580",
+        "accent": "#ffce00",
+        "players": [
+          {
+            "id": "nam-gk",
+            "name": "K. Diya",
+            "position": "GK",
+            "photo": "player11.jpg",
+            "x": 50,
+            "y": 95
+          },
+          {
+            "id": "nam-rb",
+            "name": "B. Horaeb",
+            "position": "RB",
+            "photo": "player12.jpg",
+            "x": 78,
+            "y": 80
+          },
+          {
+            "id": "nam-cb1",
+            "name": "L. Horaeb",
+            "position": "CB",
+            "photo": "player1.jpg",
+            "x": 60,
+            "y": 80
+          },
+          {
+            "id": "nam-cb2",
+            "name": "C. Haoseb",
+            "position": "CB",
+            "photo": "player2.jpg",
+            "x": 40,
+            "y": 80
+          },
+          {
+            "id": "nam-lb",
+            "name": "S. Hanamub",
+            "position": "LB",
+            "photo": "player3.jpg",
+            "x": 22,
+            "y": 80
+          },
+          {
+            "id": "nam-rm",
+            "name": "P. Shalulile",
+            "position": "RM",
+            "photo": "player4.jpg",
+            "x": 78,
+            "y": 55
+          },
+          {
+            "id": "nam-cm1",
+            "name": "D. Hotto",
+            "position": "CM",
+            "photo": "player5.jpg",
+            "x": 60,
+            "y": 55
+          },
+          {
+            "id": "nam-cm2",
+            "name": "A. Nekundi",
+            "position": "CM",
+            "photo": "player6.jpg",
+            "x": 40,
+            "y": 55
+          },
+          {
+            "id": "nam-lm",
+            "name": "W. Shikongo",
+            "position": "LM",
+            "photo": "player7.jpg",
+            "x": 22,
+            "y": 55
+          },
+          {
+            "id": "nam-st1",
+            "name": "M. Papama",
+            "position": "ST",
+            "photo": "player8.jpg",
+            "x": 60,
+            "y": 25
+          },
+          {
+            "id": "nam-st2",
+            "name": "P. Imbondi",
+            "position": "ST",
+            "photo": "player9.jpg",
+            "x": 40,
+            "y": 25
+          }
+        ]
+      },
+      "away": {
+        "name": "Angola",
+        "code": "ANG",
+        "rating": 7.12,
+        "formation": "4-3-3",
+        "color": "#d21034",
+        "accent": "#ffd700",
+        "players": [
+          {
+            "id": "ang-gk",
+            "name": "A. Neblu",
+            "position": "GK",
+            "photo": "player10.jpg",
+            "x": 50,
+            "y": 5
+          },
+          {
+            "id": "ang-rb",
+            "name": "B. Gaspar",
+            "position": "RB",
+            "photo": "player11.jpg",
+            "x": 25,
+            "y": 22
+          },
+          {
+            "id": "ang-cb1",
+            "name": "E. Bastos",
+            "position": "CB",
+            "photo": "player12.jpg",
+            "x": 40,
+            "y": 22
+          },
+          {
+            "id": "ang-cb2",
+            "name": "S. Buatu",
+            "position": "CB",
+            "photo": "player1.jpg",
+            "x": 60,
+            "y": 22
+          },
+          {
+            "id": "ang-lb",
+            "name": "B. Paizo",
+            "position": "LB",
+            "photo": "player2.jpg",
+            "x": 75,
+            "y": 22
+          },
+          {
+            "id": "ang-cm1",
+            "name": "F. Show",
+            "position": "CM",
+            "photo": "player3.jpg",
+            "x": 35,
+            "y": 40
+          },
+          {
+            "id": "ang-cm2",
+            "name": "A. Dala",
+            "position": "CM",
+            "photo": "player4.jpg",
+            "x": 50,
+            "y": 40
+          },
+          {
+            "id": "ang-cm3",
+            "name": "M. Carlinhos",
+            "position": "CM",
+            "photo": "player5.jpg",
+            "x": 65,
+            "y": 40
+          },
+          {
+            "id": "ang-rw",
+            "name": "G. Manucho",
+            "position": "RW",
+            "photo": "player6.jpg",
+            "x": 25,
+            "y": 60
+          },
+          {
+            "id": "ang-st",
+            "name": "G. Gelson",
+            "position": "ST",
+            "photo": "player7.jpg",
+            "x": 50,
+            "y": 70
+          },
+          {
+            "id": "ang-lw",
+            "name": "F. Mabululu",
+            "position": "LW",
+            "photo": "player8.jpg",
+            "x": 75,
+            "y": 60
+          }
+        ]
+      }
+    },
+    "filters": [
+      "Performance",
+      "Club",
+      "Age",
+      "Market value",
+      "Height"
+    ],
+    "standings": [
+      {
+        "team": "Namibia",
+        "played": 4,
+        "wins": 3,
+        "draws": 0,
+        "losses": 1,
+        "gf": 9,
+        "ga": 4,
+        "gd": 5,
+        "points": 9
+      },
+      {
+        "team": "Angola",
+        "played": 4,
+        "wins": 2,
+        "draws": 1,
+        "losses": 1,
+        "gf": 7,
+        "ga": 5,
+        "gd": 2,
+        "points": 7
+      },
+      {
+        "team": "Botswana",
+        "played": 4,
+        "wins": 1,
+        "draws": 1,
+        "losses": 2,
+        "gf": 4,
+        "ga": 6,
+        "gd": -2,
+        "points": 4
+      },
+      {
+        "team": "Lesotho",
+        "played": 4,
+        "wins": 0,
+        "draws": 2,
+        "losses": 2,
+        "gf": 3,
+        "ga": 6,
+        "gd": -3,
+        "points": 2
+      }
+    ],
+    "details": [
+      {
+        "label": "Stadium",
+        "value": "Sam Nujoma Stadium"
+      },
+      {
+        "label": "Referee",
+        "value": "Victor Gomes"
+      },
+      {
+        "label": "Weather",
+        "value": "28°C, Clear"
+      }
+    ]
+  }
+]
