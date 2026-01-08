@@ -1,4 +1,5 @@
 import { placeholderImages } from '../assets/placeholders.js';
+import { getTeamLogo } from '../utils/teamAssets.js';
 
 const flagSources = {
   namibia: placeholderImages.logos.namibia,
@@ -13,7 +14,8 @@ export const getFlagForTeam = (teamName) => {
   if (!teamName) return flagSources.namibia;
   const key = sanitize(teamName);
   if (flagSources[key]) return flagSources[key];
-  if (key.includes('namibia') || key.includes('brave')) return flagSources.namibia;
-  return placeholderImages.logos.namibia;
+  if (key.includes('namibia') || key.includes('brave') || key.includes('footballhub')) return flagSources.namibia;
+  // Use team assets utility for logo
+  return getTeamLogo(teamName, true);
 };
 

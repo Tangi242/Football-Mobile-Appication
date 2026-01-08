@@ -1,11 +1,14 @@
 import { placeholderImages } from '../assets/placeholders.js';
+import { onlineImages } from '../assets/onlineImages.js';
 
 export const nfaImages = {
-  hero: placeholderImages.matchBanners[0],
-  matchBackdrop: placeholderImages.matchBanners[1],
-  fans: placeholderImages.matchBanners[2] || placeholderImages.matchBanners[0],
-  newsFallbacks: placeholderImages.news,
-  playerGallery: placeholderImages.players
+  hero: { uri: onlineImages.landingHero },
+  matchBackdrop: { uri: onlineImages.matchBanners[1] },
+  fans: { uri: onlineImages.matchBanners[2] || onlineImages.matchBanners[0] },
+  newsFallbacks: placeholderImages.news.map(url => ({ uri: url })),
+  playerGallery: placeholderImages.players.map(url => ({ uri: url })),
+  // Background for auth screens - ball on grass
+  authBackground: { uri: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=1200&q=80' }
 };
 
 export const getNewsImage = (index = 0) =>

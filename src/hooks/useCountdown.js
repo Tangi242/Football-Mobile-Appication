@@ -25,15 +25,21 @@ const useCountdown = (targetDate) => {
   }
 
   const duration = dayjs.duration(Math.max(diff, 0));
-  const hours = duration.hours() + duration.days() * 24;
+  const days = duration.days();
+  const hours = duration.hours();
   const minutes = duration.minutes();
   const seconds = duration.seconds();
+  const totalHours = hours + days * 24;
 
   return {
-    formatted: `${formatUnit(hours)}:${formatUnit(minutes)}:${formatUnit(seconds)}`,
+    formatted: days > 0 
+      ? `${days}d ${formatUnit(hours)}:${formatUnit(minutes)}:${formatUnit(seconds)}`
+      : `${formatUnit(totalHours)}:${formatUnit(minutes)}:${formatUnit(seconds)}`,
+    days,
     hours,
     minutes,
     seconds,
+    totalHours,
     isPast: diff <= 0
   };
 };

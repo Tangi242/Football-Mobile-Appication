@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "NFA",
-    "slug": "NFA",
+    "name": "Ballr",
+    "slug": "footballhub",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/logos/Logo.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./assets/logo.png",
+      "image": "./assets/logos/Logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -17,22 +17,34 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/logo.png",
+        "foregroundImage": "./assets/logos/Logo.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "package": "com.nfa.footballhub",
+      "versionCode": 1,
+      "permissions": [
+        "INTERNET",
+        "ACCESS_NETWORK_STATE",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE"
+      ]
     },
     "web": {
-      "favicon": "./assets/logo.png"
+      "favicon": "./assets/logos/Logo.png"
     },
     "plugins": [
       [
         "expo-notifications",
         {
-            "icon": "./assets/logo.png",
+          "icon": "./assets/logos/Logo.png",
           "color": "#0f172a"
-    }
-      ]
+        }
+      ],
+      "expo-sqlite"
     ]
   }
 }

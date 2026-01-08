@@ -9,6 +9,7 @@ import {
   fetchLeaders
 } from '../api/client.js';
 import { initSocket } from '../api/socket.js';
+// All data now comes from database - no example data fallbacks
 
 const DataContext = createContext();
 
@@ -37,7 +38,7 @@ export const DataProvider = ({ children }) => {
     setLoading(true);
     try {
       const [fixturesRes, resultsRes, reportsRes, announcementsRes, usersRes, leaguesRes, leadersRes] =
-        await Promise.all([
+        await Promise.allSettled([
           fetchFixtures(),
           fetchResults(),
           fetchReports(),
@@ -46,20 +47,35 @@ export const DataProvider = ({ children }) => {
           fetchLeagues(),
           fetchLeaders()
         ]);
+      
+      // Use API data only - no fallbacks to example data
       setData((prev) => ({
         ...prev,
-        fixtures: fixturesRes.data.fixtures,
-        results: resultsRes.data.results,
-        reports: reportsRes.data.reports,
-        announcements: announcementsRes.data.announcements,
-        users: usersRes.data.users,
-        leagues: leaguesRes.data.leagues,
-        leaders: leadersRes.data.leaders
+        fixtures: fixturesRes.status === 'fulfilled' ? (fixturesRes.value?.data?.fixtures || []) : [],
+        results: resultsRes.status === 'fulfilled' ? (resultsRes.value?.data?.results || []) : [],
+        reports: reportsRes.status === 'fulfilled' ? (reportsRes.value?.data?.reports || []) : [],
+        announcements: announcementsRes.status === 'fulfilled' ? (announcementsRes.value?.data?.announcements || []) : [],
+        users: usersRes.status === 'fulfilled' ? (usersRes.value?.data?.users || []) : [],
+        leagues: leaguesRes.status === 'fulfilled' ? (leaguesRes.value?.data?.leagues || []) : [],
+        leaders: leadersRes.status === 'fulfilled' ? (leadersRes.value?.data?.leaders || { goals: [], assists: [], yellows: [], reds: [] }) : { goals: [], assists: [], yellows: [], reds: [] },
       }));
       setError(null);
     } catch (err) {
       console.error('Failed to load data', err);
-      setError('Unable to load latest data. Pull to refresh.');
+      // On complete failure, set empty arrays - no example data
+      setData((prev) => ({
+        ...prev,
+        fixtures: [],
+        results: [],
+        reports: [],
+        announcements: [],
+        users: [],
+        leagues: [],
+        leaders: { goals: [], assists: [], yellows: [], reds: [] },
+      }));
+      // Use user-friendly error message if available
+      const errorMessage = err?.userMessage || err?.message || 'Failed to load data from database.';
+      setError(errorMessage);
     } finally {
       setLoading(false);
     }
@@ -74,13 +90,20 @@ export const DataProvider = ({ children }) => {
     if (!socket) return;
     socket.on('connect', () => console.log('Realtime connected'));
     socket.on('live-events:update', (event) => {
-      setData((prev) => ({
-        ...prev,
-        liveEvents: {
-          ...prev.liveEvents,
-          [event.matchId]: event.payload
-        }
-      }));
+      setData((prev) => {
+        const existingEvent = prev.liveEvents[event.matchId] || {};
+        return {
+          ...prev,
+          liveEvents: {
+            ...prev.liveEvents,
+            [event.matchId]: {
+              ...existingEvent,
+              ...event.payload,
+              lastUpdate: new Date().toISOString()
+            }
+          }
+        };
+      });
     });
     return () => {
       socket.off('live-events:update');
